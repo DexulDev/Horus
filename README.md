@@ -1,4 +1,4 @@
-# HORUS
+# Horus
 
 > **No construiré lo más grande que pueda.**
 > **Construiré lo más pequeño que me obligue a entender algo profundamente.**
@@ -251,31 +251,11 @@ Networking de bajo nivel y comprensión del funcionamiento de un async runtime.
 
 Sistemas completos pequeños: profiler, storage engine, VM y FFI.
 
+
 ### 24 meses
 
 Capacidad para leer software de sistemas real, modificarlo, medirlo, explicar sus decisiones y contribuir a proyectos existentes.
 
 ---
 
-## Reglas
-
-1. No construir por construir.
-2. Si un proyecto deja de enseñar, se termina o se abandona.
-3. Matar proyectos también es progreso.
-4. No perseguir tecnologías por moda.
-5. La pregunta es primaria; la tecnología es secundaria.
-6. No construir otro Linux si un experimento pequeño permite comprender el mismo concepto.
-7. No sacrificar sueño por una streak.
-8. No convertir el aprendizaje en productividad forzada.
-9. La universidad complementa el proyecto; no compite con él.
-10. Comprender algo importa más que terminar algo.
-
----
-
-## Mantra
-
-> **No construiré lo más grande que pueda.**
-> **Construiré lo más pequeño que me obligue a entender algo profundamente.**
-
-**HORUS — Start small. Go deep.**
-
+> Vivo por tu memoria, viejo amigo.
