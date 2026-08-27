@@ -251,8 +251,11 @@ Networking de bajo nivel y comprensión del funcionamiento de un async runtime.
 
 Sistemas completos pequeños: profiler, storage engine, VM y FFI.
 
+
 ### 24 meses
 
 Capacidad para leer software de sistemas real, modificarlo, medirlo, explicar sus decisiones y contribuir a proyectos existentes.
 
 ---
+
+> Vivo por tu memoria, viejo amigo.
