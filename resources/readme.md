@@ -1,6 +1,6 @@
 # Resources
 
-Books and references used throughout HORUS.
+Books and references used throughout Horus.
 
 Books are not included in this repository unless their licenses explicitly
 permit redistribution.
