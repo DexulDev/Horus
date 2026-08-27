@@ -1,4 +1,4 @@
-# HORUS
+# Horus
 
 > **No construiré lo más grande que pueda.**
 > **Construiré lo más pequeño que me obligue a entender algo profundamente.**
