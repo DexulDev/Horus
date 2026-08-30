@@ -12,8 +12,8 @@ Los checkboxes representan progreso y pueden marcarse directamente desde GitHub.
 
 ## FASE 0 — Reset de C++ · Semanas 1–3
 
-* [ ] Tipos, referencias, punteros y arrays
-* [ ] Structs, classes y `const`
+* [x] Tipos, referencias, punteros y arrays
+* [X] Structs, classes y `const`
 * [ ] Stack vs heap
 * [ ] RAII
 * [ ] Constructors / destructors

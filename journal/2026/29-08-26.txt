@@ -1,0 +1,180 @@
+Tipos, referencias, punteros y arrays.
+
+Tengo entendido a este punto relativamente bien qué cosa son los arrays, 
+pues en programación y a lo largo de mi carrera como estudiante han sido
+objeto de estudio en muchas partes.
+
+El tema es que de tipos y referencias no tengo mucha idea, sobre punteros 
+solamente sé le escencial/conceptual.
+
+recordando un poco la estructura en C++ para hacer programas pienso en:
+
+#include<iostream>
+
+int main(){
+  std::cout<<"Hola mundo!\n";
+}
+
+pero usemos namespace jeje
+haré el código para sacar un factorial...
+
+#include<iostream>
+
+using namespace std;
+
+int factorial(int n){
+  int r=n;
+  if(n==0) return 1;
+  for(int i=1;i<n;i++){
+    r*=i;
+  }
+  return r;
+}
+
+void imprimir_factorial(int n){
+  cout<<"Factorial de "<<n<<" es: "<<factorial(n)<<"\n";
+}
+
+int main(){
+  unsigned x = 5;
+  imprimir_factorial(x); //Debe imprimir 120;
+}
+
+Ahora que ando leyendo entiendo xd, un tipo es literalmente el tipo de variable
+int, void, double, long, longchar, String <- es un tipo compuesto, char, float
+aunque acá veo uno nuevo, unsigned.
+
+unsigned pensé que era unasigned, pero no, es literalmente sin-signo
+
+entonces unsigned es para todo entero positivo... Me pregunto por qué no enseñan
+esto y lo que sigue en las escuelas...
+
+Operadores bitwise....
+
+supongamos dos variables
+int a = 2
+int b = 4
+
+el valor binario de a es 0010
+el valor binario de b es 0100
+
+existen los siguientes operadores:
+&
+|
+^
+~
+
+esos son bitwise, aparte están los lógicos como && y || pero explicarlos
+es redundante.
+
+& funciona para dejar pasar bits que nos interesan según la mascara.
+
+acá nace el concepto de máscara. Una máscara es como una variable que
+selecciona sobre que bits actuar, supongamos lo siguiente:
+
+tengo otra variable
+int c = 7
+el valor binario de c es 0111
+
+entonces supongamos que hacemos a&c
+
+cout<<a&c va a mostrar a, sin embargo hagamos otro ejemplo más curioso
+
+tengo una variable d
+
+int d = 13
+el valor binario de 13 es 1101
+
+entonces si hago:
+
+int resultado = d&a
+resultado será igual a 0 
+
+¿Por qué?
+
+porque básicamente comparas dos valores:
+
+0010
+&
+1101
+
+d funciona como mascara, selecciona los bits 1,2 y 4, que sus valores son 0
+& indica que los dejes pasar, entonces el resultado es 00x0, pero esa x es el
+valor que NO pasó, entonces se vuelve 0
+
+con | pasa algo similar, pero hace que los bits 1 de la mascara hagan 1 al base
+
+b|a hace un valor 0110
+
+^ es un XOR, los deja pasar cuando son distintos.
+
+y ~ opera sin mascara pero invierte todo, así que
+
+int x = 3 <- 0011
+
+~x te va a dar 1100 que es 12
+
+un puntero se declara usando *
+
+por ejemplo char* p
+
+para referirse a elementos en un array puedes usar
+
+string a[6];
+char* p = &a[4];
+
+//////////////////////////////
+int x = 10;
+int* p = &x;
+
+*p = 50;
+
+hace que x valga 10, porque *p apunta a x
+
+al hacer que int* p = &x; le indica que vaya al lugar donde se ubica x,
+y al hacer *p = 50; le indicas que el valor a donde apunta ahora p que es donde
+apunta x, sea 50, por lo que x ahora vale 50
+
+
+encapsulamiento es simple
+
+#include<iostream>
+#include<string>
+
+
+struct Animal{
+  public:
+    std::string nombre;
+    int edad;
+    
+    Animal(std::string nombre, int edad){
+      this->nombre = nombre;
+      this->edad = edad;
+    }
+
+    //aunque también puede hacerse así, más lindo:
+
+    Animal(std::string nombre, int edad)
+      : nombre(nombre), edad(edad) {}
+};
+
+tambien puede haber herencia
+
+struct Perro : Animal{
+  using Animal::Animal;
+  
+  void ladrar(){
+    std::cout<<"Woof!\n";
+  }
+};
+
+entonces hay sobrecarga de metodos, etc, como java.
+
+y yap haces tu
+int main(){
+  Animal gato{"gato", 5}; <- ojo, no se usan paréntesis de recomendación, así no se pierde información en conversiones explícitas 
+  Perro Latte{"Latte", 4};
+  Latte.ladrar();
+}
+
+Con esto termino el dia 1.
