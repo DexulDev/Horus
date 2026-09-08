@@ -237,8 +237,16 @@ Commands and abstractions should not be added merely to increase the project's f
 
 * [x] Configure CMake.
 * [x] Define initial project structure.
-* [ ] Create basic CLI.
+* [x] Create basic CLI.
+*     [x] Prompt
+*     [x] Command loop
+*     [x] help
+*     [x] exit
+*     [ ] Unknown command
 * [ ] Implement Input/Output.
+*     [ ] Input reads commands
+*     [ ] Output displays responses
+
 * [ ] Create Kernel.
 * [ ] Create Process.
 * [ ] Create Hardware.
