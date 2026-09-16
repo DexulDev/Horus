@@ -27,6 +27,7 @@ void exit(){
 }
 
 int main(){
+  std::string _;
   std::string r;
   //Input input = new Input();
   //Output output = new Output();
@@ -38,7 +39,12 @@ int main(){
     }else if(r == "exit"){
       exit();
       return 0;
+    }else{ //keep this to last else because lack of switch method 
+      clear();
+      std::cout << "Error: Unknown command...\n" << "Press enter to exit";
+      std::getline(std::cin, _);
+      screen();
     }
-    //TODO: chingadera de create, kill, status con argumentos
+    //TODO: create, kill, status w arguments
   }
 }

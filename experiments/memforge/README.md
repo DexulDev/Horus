@@ -242,7 +242,7 @@ Commands and abstractions should not be added merely to increase the project's f
 *     [x] Command loop
 *     [x] help
 *     [x] exit
-*     [ ] Unknown command
+*     [x] Unknown command
 * [ ] Implement Input/Output.
 *     [ ] Input reads commands
 *     [ ] Output displays responses
