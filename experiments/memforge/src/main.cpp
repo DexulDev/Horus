@@ -18,7 +18,6 @@ void help(){
   std::cout << "  status" << std::endl;
   std::cout << "  help" << std::endl;
   std::cout << "  exit" << std::endl;
-  screen();
 }
 
 void exit(){
@@ -32,6 +31,7 @@ int main(){
   //Input input = new Input();
   //Output output = new Output();
   while(true){
+    //TODO: add command logs to the main screen
     screen();
     std::getline(std::cin, r);
     if(r == "help"){
@@ -43,7 +43,6 @@ int main(){
       clear();
       std::cout << "Error: Unknown command...\n" << "Press enter to exit";
       std::getline(std::cin, _);
-      screen();
     }
     //TODO: create, kill, status w arguments
   }
