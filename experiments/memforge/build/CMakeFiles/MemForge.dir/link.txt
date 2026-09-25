@@ -1,1 +1,0 @@
-/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/MemForge.dir/link.d CMakeFiles/MemForge.dir/src/main.cpp.o -o MemForge

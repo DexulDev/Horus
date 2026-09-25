@@ -1,3 +1,0 @@
-/home/eduu/Horus/experiments/memforge/build/CMakeFiles/MemForge.dir
-/home/eduu/Horus/experiments/memforge/build/CMakeFiles/edit_cache.dir
-/home/eduu/Horus/experiments/memforge/build/CMakeFiles/rebuild_cache.dir
