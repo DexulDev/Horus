@@ -244,7 +244,7 @@ Commands and abstractions should not be added merely to increase the project's f
 *     [x] exit
 *     [x] Unknown command
 * [ ] Implement Input/Output.
-*     [ ] Input reads commands
+*     [x] Input reads commands
 *     [ ] Output displays responses
 
 * [ ] Create Kernel.
