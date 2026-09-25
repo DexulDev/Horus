@@ -2,4 +2,4 @@
 
 Toy C++ process/resource manager simulator (OOP practice).
 
-→ github.com/DexulDev/MemForge
+→ https://github.com/DexulDev/MemForge
