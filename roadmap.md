@@ -1,19 +1,19 @@
 # HORUS — Roadmap
 
-Roadmap de **24 meses** para el estudio práctico de sistemas de bajo nivel.
+**24-month** roadmap for the practical study of low-level systems.
 
-**C → C++ → Rust → Linux → memoria → concurrencia → networking → storage → runtimes → kernel**
+**C → C++ → Rust → Linux → memory → concurrency → networking → storage → runtimes → kernel**
 
-Los checkboxes representan progreso y pueden marcarse directamente desde GitHub.
+The checkboxes represent progress and can be checked directly from GitHub.
 
 ---
 
-# Año 1 — Fundamentos y sistemas
+# Year 1 — Foundations and Systems
 
-## FASE 0 — Reset de C++ · Semanas 1–3
+## PHASE 0 — C++ Reset · Weeks 1–3
 
-* [x] Tipos, referencias, punteros y arrays
-* [x] Structs, classes y `const`
+* [x] Types, references, pointers, and arrays
+* [x] Structs, classes, and `const`
 * [ ] Stack vs heap
 * [ ] RAII
 * [ ] Constructors / destructors
@@ -27,11 +27,11 @@ Los checkboxes representan progreso y pueden marcarse directamente desde GitHub.
 * [ ] Linking
 * [ ] Translation units
 * [ ] Object files
-* [ ] ABI básica
+* [ ] Basic ABI
 
-### Criterio de salida
+### Exit criterion
 
-Explicar de forma precisa:
+Precisely explain:
 
 ```text
 source
@@ -53,30 +53,30 @@ memory
 
 ---
 
-# PROYECTO 1 — Arena Allocator
+# PROJECT 1 — Arena Allocator
 
-**C++ · ~2 semanas**
+**C++ · ~2 weeks**
 
 * [ ] `allocate(size)`
 * [ ] `reset()`
 * [ ] `remaining()`
-* [ ] Alignment configurable
-* [ ] Asignación secuencial sin `new` por objeto
-* [ ] Manejo de overflow
+* [ ] Configurable alignment
+* [ ] Sequential allocation without `new` per object
+* [ ] Overflow handling
 * [ ] Tests
-* [ ] Benchmarks contra `malloc`
-* [ ] Documentación del diseño
+* [ ] Benchmarks against `malloc`
+* [ ] Design documentation
 
-### Preguntas
+### Questions
 
-* [ ] ¿Qué es alignment?
-* [ ] ¿Memoria física vs virtual?
-* [ ] ¿Cuál es el coste de `malloc`?
-* [ ] ¿Qué papel tiene RAII?
+* [ ] What is alignment?
+* [ ] Physical vs virtual memory?
+* [ ] What is the cost of `malloc`?
+* [ ] What role does RAII play?
 
 ---
 
-# FASE 1 — C · Semanas 4–8
+# PHASE 1 — C · Weeks 4–8
 
 * [ ] Pointers
 * [ ] Pointer arithmetic
@@ -88,7 +88,7 @@ memory
 * [ ] Bitwise operations
 * [ ] Files
 * [ ] File descriptors
-* [ ] POSIX básico
+* [ ] Basic POSIX
 * [ ] `fork`
 * [ ] `exec`
 * [ ] `wait`
@@ -96,11 +96,11 @@ memory
 
 ---
 
-# PROYECTO 2 — Unix Utilities
+# PROJECT 2 — Unix Utilities
 
 **C · POSIX**
 
-Implementar:
+Implement:
 
 * [ ] `cat`
 * [ ] `cp`
@@ -109,20 +109,20 @@ Implementar:
 * [ ] `head`
 * [ ] `tail`
 
-### Requisitos
+### Requirements
 
 * [ ] File descriptors
 * [ ] Syscalls
 * [ ] Buffers
-* [ ] Manejo de errores
-* [ ] Argumentos CLI
+* [ ] Error handling
+* [ ] CLI arguments
 * [ ] Tests
 * [ ] Benchmarks
-* [ ] No copiar implementaciones existentes
+* [ ] Don't copy existing implementations
 
 ---
 
-# FASE 2 — Rust Fundamentals · Semanas 9–14
+# PHASE 2 — Rust Fundamentals · Weeks 9–14
 
 * [ ] Ownership
 * [ ] Borrowing
@@ -140,7 +140,7 @@ Implementar:
 * [ ] Modules
 * [ ] Error handling
 * [ ] Testing
-* [ ] Concurrency básica
+* [ ] Basic concurrency
 * [ ] Cargo
 * [ ] `rustfmt`
 * [ ] Clippy
@@ -149,37 +149,37 @@ Implementar:
 
 ---
 
-# PROYECTO 3 — Arena Allocator en Rust
+# PROJECT 3 — Arena Allocator in Rust
 
-* [ ] Reimplementar el allocator
-* [ ] Comparar `arena-cpp` vs `arena-rs`
+* [ ] Reimplement the allocator
+* [ ] Compare `arena-cpp` vs `arena-rs`
 * [ ] Ownership
 * [ ] Lifetimes
 * [ ] `unsafe`
 * [ ] Raw pointers
 * [ ] Invariants
-* [ ] Benchmarks comparativos
-* [ ] Documentación
+* [ ] Comparative benchmarks
+* [ ] Documentation
 
-### Pregunta central
+### Central question
 
-> ¿Qué problemas deben resolverse manualmente en C++ que Rust hace explícitos mediante su modelo de ownership?
+> What problems must be solved manually in C++ that Rust makes explicit through its ownership model?
 
 ---
 
-# FASE 3 — Data Structures + Concurrency · Semanas 15–20
+# PHASE 3 — Data Structures + Concurrency · Weeks 15–20
 
-Implementar:
+Implement:
 
 * [ ] Dynamic vector
 * [ ] Linked list
 * [ ] Hash map
 * [ ] Binary heap
 * [ ] BST
-* [ ] B-tree simplificado
+* [ ] Simplified B-tree
 * [ ] Ring buffer
 
-Estructura:
+Structure:
 
 ```text
 systems-ds/
@@ -191,11 +191,11 @@ systems-ds/
 
 ---
 
-# PROYECTO 4 — Concurrent Ring Buffer
+# PROJECT 4 — Concurrent Ring Buffer
 
 **C++ + Rust**
 
-Evolución:
+Evolution:
 
 * [ ] Single-threaded
 * [ ] Producer / consumer
@@ -211,13 +211,13 @@ Evolución:
 * [ ] False sharing
 * [ ] Data races
 
-### Pregunta central
+### Central question
 
-> ¿Qué garantiza realmente cada operación atómica?
+> What does each atomic operation actually guarantee?
 
 ---
 
-# FASE 4 — Linux + Operating Systems · Meses 6–9
+# PHASE 4 — Linux + Operating Systems · Months 6–9
 
 * [ ] Processes
 * [ ] System calls
@@ -230,7 +230,7 @@ Evolución:
 * [ ] I/O
 * [ ] File systems
 
-Dominar el pipeline:
+Master the pipeline:
 
 ```text
 source
@@ -256,7 +256,7 @@ kernel
 hardware
 ```
 
-### Herramientas
+### Tools
 
 * [ ] `gdb`
 * [ ] `strace`
@@ -269,7 +269,7 @@ hardware
 
 ---
 
-# PROYECTO 5 — Mini Shell
+# PROJECT 5 — Mini Shell
 
 **C + Linux**
 
@@ -281,12 +281,12 @@ hardware
 * [ ] Environment variables
 * [ ] Signals
 * [ ] Background processes
-* [ ] Job control básico
+* [ ] Basic job control
 * [ ] Tests
 
 ---
 
-# FASE 5 — Networking · Meses 9–12
+# PHASE 5 — Networking · Months 9–12
 
 * [ ] TCP
 * [ ] UDP
@@ -301,31 +301,31 @@ hardware
 
 ---
 
-# PROYECTO 6 — Async TCP Runtime
+# PROJECT 6 — Async TCP Runtime
 
-**Rust · Linux · sin Tokio**
+**Rust · Linux · without Tokio**
 
 * [ ] TCP listener
 * [ ] Non-blocking sockets
-* [ ] Event loop con `epoll`
+* [ ] Event loop with `epoll`
 * [ ] Task abstraction
-* [ ] Executor mínimo
-* [ ] Channel básico
+* [ ] Minimal executor
+* [ ] Basic channel
 * [ ] Benchmarks
-* [ ] Documentación
+* [ ] Documentation
 
-### Pregunta central
+### Central question
 
-> ¿Qué problema resuelve realmente un async runtime?
+> What problem does an async runtime actually solve?
 
-Después:
+Afterward:
 
-* [ ] Estudiar Tokio
-* [ ] Comparar ambos diseños
+* [ ] Study Tokio
+* [ ] Compare both designs
 
 ---
 
-# CHECKPOINT — Fin del Año 1
+# CHECKPOINT — End of Year 1
 
 * [ ] `arena-cpp`
 * [ ] `arena-rs`
@@ -335,36 +335,36 @@ Después:
 * [ ] `dxshell`
 * [ ] `rust-runtime`
 
-Todos publicados con documentación suficiente para explicar:
+All published with documentation sufficient to explain:
 
-* [ ] Qué se construyó
-* [ ] Por qué se construyó
-* [ ] Cómo funciona
-* [ ] Qué errores aparecieron
-* [ ] Qué trade-offs existen
-* [ ] Cómo se midió el resultado
-
----
-
-# Año 2 — Sistemas completos
-
-> La pregunta cambia de **«¿cómo funciona X?»** a **«¿qué pasaría si X funcionara de otra manera?»**
+* [ ] What was built
+* [ ] Why it was built
+* [ ] How it works
+* [ ] What errors came up
+* [ ] What trade-offs exist
+* [ ] How the result was measured
 
 ---
 
-# PROYECTO 7 — Memory Profiler
+# Year 2 — Complete Systems
+
+> The question shifts from **"how does X work?"** to **"what would happen if X worked differently?"**
+
+---
+
+# PROJECT 7 — Memory Profiler
 
 **C++ + Linux**
 
-* [ ] Registrar allocation / deallocation
-* [ ] Registrar tamaño
-* [ ] Registrar timestamp
-* [ ] Registrar thread
-* [ ] Registrar stack trace
+* [ ] Record allocation / deallocation
+* [ ] Record size
+* [ ] Record timestamp
+* [ ] Record thread
+* [ ] Record stack trace
 * [ ] Peak memory
 * [ ] Leaks
 * [ ] Top allocation sites
-* [ ] Estudiar `/proc`
+* [ ] Study `/proc`
 * [ ] Stack traces
 * [ ] ELF
 * [ ] Symbol resolution
@@ -372,7 +372,7 @@ Todos publicados con documentación suficiente para explicar:
 
 ---
 
-# PROYECTO 8 — Mini Database
+# PROJECT 8 — Mini Database
 
 **Rust · LSM-tree**
 
@@ -388,13 +388,13 @@ Todos publicados con documentación suficiente para explicar:
 * [ ] Tests
 * [ ] Benchmarks
 
-### Pregunta central
+### Central question
 
-> ¿Cómo sobreviven los datos a que el proceso muera en el peor momento?
+> How does data survive the process dying at the worst possible moment?
 
 ---
 
-# PROYECTO 9 — Compiler / VM
+# PROJECT 9 — Compiler / VM
 
 **C++**
 
@@ -423,45 +423,45 @@ VM
 * [ ] Error reporting
 * [ ] Tests
 
-No implementar LLVM primero.
+Don't implement LLVM first.
 
-Primero comprender el pipeline mediante una implementación propia; después estudiar LLVM.
+First understand the pipeline through your own implementation; study LLVM afterward.
 
 ---
 
-# PROYECTO 10 — Rust / C FFI
+# PROJECT 10 — Rust / C FFI
 
-* [ ] Biblioteca C
+* [ ] C library
 * [ ] `liballocator.so`
-* [ ] Interfaz Rust
+* [ ] Rust interface
 * [ ] ABI
 * [ ] `extern "C"`
-* [ ] Ownership a través de FFI
+* [ ] Ownership across FFI
 * [ ] Error boundaries
 * [ ] `unsafe`
-* [ ] Documentar garantías de seguridad
-* [ ] Documentar invariants
+* [ ] Document safety guarantees
+* [ ] Document invariants
 
-### Pregunta central
+### Central question
 
-> ¿Dónde termina el sistema de garantías de Rust y comienza la responsabilidad del programador?
+> Where does Rust's guarantee system end and the programmer's responsibility begin?
 
 ---
 
-# PROYECTO 11 — Linux Kernel Module
+# PROJECT 11 — Linux Kernel Module
 
 **C / Rust**
 
-Construir un módulo pequeño, no un kernel.
+Build a small module, not a kernel.
 
-Posibles objetivos:
+Possible goals:
 
-* [ ] Herramienta de observabilidad
-* [ ] Interfaz en `/sys/kernel/debug/`
-* [ ] Interfaz mediante `sysfs`
-* [ ] Interfaz mediante `procfs`
+* [ ] Observability tool
+* [ ] Interface at `/sys/kernel/debug/`
+* [ ] Interface via `sysfs`
+* [ ] Interface via `procfs`
 
-Estudiar:
+Study:
 
 * [ ] Kernel / user boundary
 * [ ] Module lifecycle
@@ -474,15 +474,15 @@ Estudiar:
 
 ---
 
-# PROYECTO 12 — Reformulación
+# PROJECT 12 — Reformulation
 
-**El proyecto más importante del roadmap.**
+**The most important project in the roadmap.**
 
-Elegir una herramienta pequeña existente y formular:
+Choose a small existing tool and ask:
 
-> **¿Qué podría hacer diferente?**
+> **What could I do differently?**
 
-Documentar:
+Document:
 
 ```text
 Why?
@@ -500,175 +500,175 @@ Results
 What I learned
 ```
 
-* [ ] Elegir herramienta
-* [ ] Formular hipótesis
-* [ ] Diseñar alternativa
-* [ ] Implementar
-* [ ] Medir
-* [ ] Comparar
-* [ ] Documentar resultados
+* [ ] Choose a tool
+* [ ] Formulate a hypothesis
+* [ ] Design an alternative
+* [ ] Implement
+* [ ] Measure
+* [ ] Compare
+* [ ] Document results
 
-No clonar.
+Don't clone.
 
-No reconstruir por reconstruir.
+Don't rebuild for the sake of rebuilding.
 
-**Reformular con una tesis propia.**
+**Reformulate with your own thesis.**
 
 ---
 
-# Open Source · Desde ~mes 18
+# Open Source · From ~month 18
 
-### Nivel 1
+### Level 1
 
-* [ ] Documentación
+* [ ] Documentation
 * [ ] Tests
 * [ ] Bug fixes
-* [ ] Optimizaciones pequeñas
+* [ ] Small optimizations
 
-### Nivel 2
+### Level 2
 
 * [ ] Features
 * [ ] Performance improvements
 * [ ] Refactors
 * [ ] Tooling
 
-### Nivel 3
+### Level 3
 
-* [ ] Subsistemas
-* [ ] Cambios arquitectónicos
-* [ ] Proyectos grandes
+* [ ] Subsystems
+* [ ] Architectural changes
+* [ ] Large projects
 
 ---
 
-# Checkpoints generales
+# General Checkpoints
 
-### 3 meses
+### 3 months
 
-* [ ] C y C++ cómodos
-* [ ] Comprensión profunda de memoria
-* [ ] Comprensión del proceso de compilación
+* [ ] Comfortable with C and C++
+* [ ] Deep understanding of memory
+* [ ] Understanding of the compilation process
 
-### 6 meses
+### 6 months
 
-* [ ] Estructuras de datos implementadas
-* [ ] Ownership comprendido
-* [ ] Concurrencia comprendida
+* [ ] Data structures implemented
+* [ ] Ownership understood
+* [ ] Concurrency understood
 
-### 9 meses
+### 9 months
 
-* [ ] Procesos
-* [ ] Memoria virtual
+* [ ] Processes
+* [ ] Virtual memory
 * [ ] Syscalls
-* [ ] Software que interactúa con Linux
+* [ ] Software that interacts with Linux
 
-### 12 meses
+### 12 months
 
-* [ ] Networking de bajo nivel
+* [ ] Low-level networking
 * [ ] Async I/O
-* [ ] Comprensión de runtimes async
+* [ ] Understanding of async runtimes
 
-### 18 meses
+### 18 months
 
 * [ ] Memory profiler
 * [ ] Storage engine
 * [ ] VM / compiler
 * [ ] FFI
 
-### 24 meses
+### 24 months
 
-* [ ] Leer software de sistemas real
-* [ ] Modificarlo
-* [ ] Medirlo
-* [ ] Explicar decisiones de diseño
-* [ ] Contribuir a proyectos existentes
+* [ ] Read real systems software
+* [ ] Modify it
+* [ ] Measure it
+* [ ] Explain design decisions
+* [ ] Contribute to existing projects
 
 ---
 
-# Preguntas finales
+# Final Questions
 
 <details>
-<summary>Memoria</summary>
+<summary>Memory</summary>
 
-* [ ] ¿Qué ocurre cuando se asigna memoria?
-* [ ] ¿Stack vs heap?
-* [ ] ¿Qué es alignment?
-* [ ] ¿Qué hace un allocator?
-* [ ] ¿Qué es virtual memory?
-* [ ] ¿Qué es una page table?
+* [ ] What happens when memory is allocated?
+* [ ] Stack vs heap?
+* [ ] What is alignment?
+* [ ] What does an allocator do?
+* [ ] What is virtual memory?
+* [ ] What is a page table?
 
 </details>
 
 <details>
 <summary>C / C++</summary>
 
-* [ ] ¿Compilation vs linking?
-* [ ] ¿Qué es una ABI?
-* [ ] ¿Qué significa RAII?
-* [ ] ¿Copy vs move?
-* [ ] ¿Qué produce un dangling pointer?
-* [ ] ¿Qué ocurre realmente con un `shared_ptr`?
+* [ ] Compilation vs linking?
+* [ ] What is an ABI?
+* [ ] What does RAII mean?
+* [ ] Copy vs move?
+* [ ] What produces a dangling pointer?
+* [ ] What actually happens with a `shared_ptr`?
 
 </details>
 
 <details>
 <summary>Rust</summary>
 
-* [ ] ¿Qué garantiza ownership?
-* [ ] ¿Qué significa borrowing?
-* [ ] ¿Cuándo es necesario un lifetime explícito?
-* [ ] ¿Qué justifica un `unsafe`?
-* [ ] ¿Cómo diseñar una frontera FFI segura?
-* [ ] ¿Qué coste tiene una abstracción?
+* [ ] What does ownership guarantee?
+* [ ] What does borrowing mean?
+* [ ] When is an explicit lifetime necessary?
+* [ ] What justifies an `unsafe`?
+* [ ] How do you design a safe FFI boundary?
+* [ ] What does an abstraction cost?
 
 </details>
 
 <details>
 <summary>Linux</summary>
 
-* [ ] ¿Qué es un process?
-* [ ] ¿Qué es una syscall?
-* [ ] ¿Cómo llega un programa a kernel space?
-* [ ] ¿Qué ocurre durante `fork` / `exec`?
-* [ ] ¿Cómo funciona virtual memory?
-* [ ] ¿Qué es un ELF?
+* [ ] What is a process?
+* [ ] What is a syscall?
+* [ ] How does a program reach kernel space?
+* [ ] What happens during `fork` / `exec`?
+* [ ] How does virtual memory work?
+* [ ] What is an ELF?
 
 </details>
 
 <details>
-<summary>Concurrencia</summary>
+<summary>Concurrency</summary>
 
-* [ ] ¿Qué es una data race?
-* [ ] ¿Qué garantiza un mutex?
-* [ ] ¿Qué significa memory ordering?
-* [ ] ¿Qué es false sharing?
-* [ ] ¿Cuándo vale la pena lock-free?
+* [ ] What is a data race?
+* [ ] What does a mutex guarantee?
+* [ ] What does memory ordering mean?
+* [ ] What is false sharing?
+* [ ] When is lock-free worth it?
 
 </details>
 
 <details>
 <summary>Networking</summary>
 
-* [ ] ¿Qué ocurre al conectar un socket?
-* [ ] ¿Cómo funciona TCP?
-* [ ] ¿Blocking vs non-blocking I/O?
-* [ ] ¿Qué hace `epoll`?
-* [ ] ¿Qué problema resuelve un executor?
+* [ ] What happens when a socket connects?
+* [ ] How does TCP work?
+* [ ] Blocking vs non-blocking I/O?
+* [ ] What does `epoll` do?
+* [ ] What problem does an executor solve?
 
 </details>
 
 <details>
 <summary>Storage</summary>
 
-* [ ] ¿Qué garantiza un WAL?
-* [ ] ¿Qué es una SSTable?
-* [ ] ¿Cómo funciona compaction?
-* [ ] ¿Qué ocurre si el proceso muere durante una escritura?
+* [ ] What does a WAL guarantee?
+* [ ] What is an SSTable?
+* [ ] How does compaction work?
+* [ ] What happens if the process dies during a write?
 
 </details>
 
 ---
 
-# Recursos
+# Resources
 
 ## C++
 
@@ -681,7 +681,7 @@ No reconstruir por reconstruir.
 * [ ] *The C Programming Language* — Kernighan & Ritchie
 * [ ] Beej's Guide to C Programming
 * [ ] man7.org
-* [ ] Documentación de GCC / binutils
+* [ ] GCC / binutils documentation
 
 ## Rust
 
@@ -692,7 +692,7 @@ No reconstruir por reconstruir.
 * [ ] The Rustonomicon
 * [ ] *Rust Atomics and Locks* — Mara Bos
 
-## Sistemas operativos / Linux
+## Operating Systems / Linux
 
 * [ ] Operating Systems: Three Easy Pieces
 * [ ] *The Linux Programming Interface* — Michael Kerrisk
@@ -700,7 +700,7 @@ No reconstruir por reconstruir.
 * [ ] Linux Kernel Documentation
 * [ ] *Linux Device Drivers*
 
-## Concurrencia
+## Concurrency
 
 * [ ] *C++ Concurrency in Action* — Anthony Williams
 * [ ] *Rust Atomics and Locks* — Mara Bos
@@ -714,13 +714,13 @@ No reconstruir por reconstruir.
 
 * [ ] *Designing Data-Intensive Applications* — Martin Kleppmann
 
-## Compiladores / VM
+## Compilers / VM
 
 * [ ] *Crafting Interpreters* — Robert Nystrom
 
 ---
 
-# Portafolio final
+# Final Portfolio
 
 * [ ] Arena allocator — C++ + Rust
 * [ ] Unix utilities / shell — C
@@ -730,9 +730,9 @@ No reconstruir por reconstruir.
 * [ ] KV database — Rust
 * [ ] VM / compiler — C++
 * [ ] Kernel module / systems tool — C / Rust
-* [ ] 3–8 contribuciones externas significativas
+* [ ] 3–8 significant external contributions
 
-Cada proyecto importante debería incluir:
+Every major project should include:
 
 ```text
 README
@@ -747,25 +747,24 @@ changelog
 
 ---
 
-# Reglas anti-monstruo
+# Anti-Monster Rules
 
-1. No construir por construir.
-2. Si un proyecto deja de enseñar, se termina o se abandona.
-3. Matar proyectos también es progreso.
-4. No perseguir tecnologías por moda.
-5. La pregunta es primaria; la tecnología es secundaria.
-6. No construir otro Linux.
-7. No sacrificar sueño por una streak.
-8. No convertir la vida personal en productividad forzada.
-9. La universidad complementa el proyecto; no compite con él.
-10. Comprender algo importa más que terminar algo.
+1. Don't build for the sake of building.
+2. If a project stops teaching you something, finish it or abandon it.
+3. Killing projects is also progress.
+4. Don't chase technologies out of trend.
+5. The question comes first; the technology is secondary.
+6. Don't build another Linux.
+7. Don't sacrifice sleep for a streak.
+8. Don't turn personal life into forced productivity.
+9. University complements the project; it doesn't compete with it.
+10. Understanding something matters more than finishing something.
 
 ---
 
 # Mantra
 
-> **No construiré lo más grande que pueda.**
-> **Construiré lo más pequeño que me obligue a entender algo profundamente.**
+> **I will not build the biggest thing I can.**
+> **I will build the smallest thing that forces me to understand something deeply.**
 
 **HORUS — Start small. Go deep.**
-

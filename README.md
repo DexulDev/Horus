@@ -1,102 +1,102 @@
 # Horus
 
-> **No construiré lo más grande que pueda.**
-> **Construiré lo más pequeño que me obligue a entender algo profundamente.**
+> **I will not build the biggest thing I can.**
+> **I will build the smallest thing that forces me to understand something deeply.**
 
-**HORUS** es un roadmap de 24 meses dedicado al estudio práctico de **sistemas de bajo nivel**.
+**HORUS** is a 24-month roadmap dedicated to the practical study of **low-level systems**.
 
-El recorrido abarca:
+The journey covers:
 
-**C → C++ → Rust → Linux → memoria → concurrencia → networking → storage → runtimes → kernel**
+**C → C++ → Rust → Linux → memory → concurrency → networking → storage → runtimes → kernel**
 
-No busca acumular tecnologías ni producir proyectos artificialmente grandes. El objetivo es comprender cómo funcionan los sistemas construyendo, midiendo, rompiendo y depurando implementaciones pequeñas.
+It does not seek to accumulate technologies or produce artificially large projects. The goal is to understand how systems work by building, measuring, breaking, and debugging small implementations.
 
 ---
 
-## Filosofía
+## Philosophy
 
 > *Start small. Go deep.*
 
-HORUS no es un bootcamp, una colección de tutoriales ni una carrera por completar tecnologías.
+HORUS is not a bootcamp, a collection of tutorials, or a race to complete technologies.
 
-Es un proceso de aprendizaje basado en:
+It is a learning process based on:
 
-* Preguntas técnicas
-* Experimentación
-* Código
+* Technical questions
+* Experimentation
+* Code
 * Debugging
 * Benchmarks
-* Lectura de código real
-* Documentación
-* Diseño y análisis de trade-offs
-* Contribuciones open source
+* Reading real code
+* Documentation
+* Design and trade-off analysis
+* Open source contributions
 
-La escala de cada proyecto debe estar determinada por **lo que permite aprender**, no por lo impresionante que resulte.
+The scale of each project should be determined by **what it allows you to learn**, not by how impressive it looks.
 
-Una implementación pequeña que obliga a comprender memoria, concurrencia o el funcionamiento del kernel vale más que un proyecto enorme construido siguiendo abstracciones que no se entienden.
-
----
-
-## Principio de trabajo
-
-**1 hora diaria sostenible > 6 horas un domingo y desaparecer dos semanas.**
-
-El ritmo recomendado es:
-
-* **Normal:** ~6 h/semana
-* **Con energía:** 8–10 h/semana
-* **Semana difícil:** 20 minutos cuentan
-
-HORUS debe coexistir con universidad, trabajo, descanso y vida personal.
-
-No existe una obligación de mantener una streak ni de completar todo el roadmap. **Abandonar un proyecto que dejó de enseñar algo también es progreso.**
+A small implementation that forces you to understand memory, concurrency, or how the kernel works is worth more than a huge project built by following abstractions that aren't understood.
 
 ---
 
-## Sistema de aprendizaje
+## Working Principle
 
-Una sesión normal de 60 minutos:
+**1 sustainable hour a day > 6 hours on a Sunday and then disappearing for two weeks.**
+
+The recommended pace is:
+
+* **Normal:** ~6 h/week
+* **With energy:** 8–10 h/week
+* **Hard week:** 20 minutes still count
+
+HORUS must coexist with university, work, rest, and personal life.
+
+There is no obligation to maintain a streak or to complete the entire roadmap. **Abandoning a project that stopped teaching you something is also progress.**
+
+---
+
+## Learning System
+
+A normal 60-minute session:
 
 ```text
-10 min — teoría
-40 min — código / experimentación
+10 min — theory
+40 min — code / experimentation
 10 min — journal
 ```
 
-El journal sigue este formato:
+The journal follows this format:
 
 ```text
 ## YYYY-MM-DD
 
-Tiempo: XX min
+Time: XX min
 
-### Aprendí
+### Learned
 -
 
-### Construí
+### Built
 -
 
-### No entendí
+### Didn't understand
 -
 
-### Bug / descubrimiento
+### Bug / discovery
 -
 
-### Próximo paso
+### Next step
 -
 ```
 
-Cada semana se realiza una revisión de 30–45 minutos para evaluar:
+Every week a 30–45 minute review is done to assess:
 
-* Qué se aprendió realmente.
-* Qué conceptos siguen sin comprenderse.
-* Qué errores fueron importantes.
-* Si el proyecto continúa siendo útil.
-* Qué debería estudiarse después.
+* What was actually learned.
+* Which concepts are still not understood.
+* Which errors were important.
+* Whether the project is still useful.
+* What should be studied next.
 
 ---
 
-## Estructura
+## Structure
 
 ```text
 Horus/
@@ -123,90 +123,90 @@ Horus/
 
 ### `README.md`
 
-Descripción general del proyecto, filosofía y estructura.
+General description of the project, philosophy, and structure.
 
 ### `roadmap.md`
 
-Plan completo de estudio, proyectos, checkpoints y preguntas técnicas.
+Complete study plan, projects, checkpoints, and technical questions.
 
 ### `journal/`
 
-Registro cronológico del aprendizaje y los experimentos.
+Chronological record of learning and experiments.
 
 ### `notes/`
 
-Apuntes técnicos organizados por área.
+Technical notes organized by area.
 
 ### `projects/`
 
-Implementaciones desarrolladas durante el recorrido.
+Implementations developed throughout the journey.
 
 ### `resources/`
 
-Libros, documentación y referencias utilizadas.
+Books, documentation, and references used.
 
 ---
 
-## Áreas
+## Areas
 
 ### C / C++
 
-Memoria manual, punteros, RAII, ABI, compilación, linking, estructuras de datos y concurrencia.
+Manual memory management, pointers, RAII, ABI, compilation, linking, data structures, and concurrency.
 
 ### Rust
 
-Ownership, borrowing, lifetimes, `unsafe`, concurrencia, FFI y diseño de abstracciones seguras.
+Ownership, borrowing, lifetimes, `unsafe`, concurrency, FFI, and safe abstraction design.
 
 ### Linux
 
-Procesos, syscalls, memoria virtual, ELF, I/O, file systems, `/proc`, kernel space y herramientas de debugging.
+Processes, syscalls, virtual memory, ELF, I/O, file systems, `/proc`, kernel space, and debugging tools.
 
-### Concurrencia
+### Concurrency
 
-Threads, atomics, memory ordering, mutexes, lock-free programming, cache locality y false sharing.
+Threads, atomics, memory ordering, mutexes, lock-free programming, cache locality, and false sharing.
 
 ### Networking
 
-Sockets, TCP, UDP, DNS, HTTP, non-blocking I/O, `epoll` y event loops.
+Sockets, TCP, UDP, DNS, HTTP, non-blocking I/O, `epoll`, and event loops.
 
 ### Storage
 
-WAL, memtables, SSTables, indexing, compaction y recuperación ante fallos.
+WAL, memtables, SSTables, indexing, compaction, and failure recovery.
 
-### Runtimes y compiladores
+### Runtimes and Compilers
 
-Executors, async I/O, bytecode, máquinas virtuales, parsing, ASTs y compilación.
-
----
-
-## Proyectos
-
-El roadmap culmina en una serie de proyectos progresivamente más profundos:
-
-| Proyecto               | Tecnologías  |
-| ---------------------- | ------------ |
-| Arena Allocator        | C++ / Rust   |
-| Unix Utilities         | C / POSIX    |
-| Data Structures        | C++ / Rust   |
-| Concurrent Ring Buffer | C++ / Rust   |
-| Mini Shell             | C / Linux    |
-| Async TCP Runtime      | Rust / Linux |
-| Memory Profiler        | C++ / Linux  |
-| Mini Database          | Rust         |
-| Compiler / VM          | C++          |
-| Rust/C FFI             | C / Rust     |
-| Kernel Module          | C / Rust     |
-| Reformulación          | Libre        |
-
-Cada proyecto debe priorizar:
-
-**README → diseño → implementación → tests → benchmarks → resultados → conclusiones**
+Executors, async I/O, bytecode, virtual machines, parsing, ASTs, and compilation.
 
 ---
 
-## Herramientas
+## Projects
 
-Durante el recorrido se busca dominar progresivamente:
+The roadmap culminates in a series of progressively deeper projects:
+
+| Project                | Technologies |
+| ----------------------- | ------------ |
+| Arena Allocator         | C++ / Rust   |
+| Unix Utilities          | C / POSIX    |
+| Data Structures         | C++ / Rust   |
+| Concurrent Ring Buffer  | C++ / Rust   |
+| Mini Shell              | C / Linux    |
+| Async TCP Runtime       | Rust / Linux |
+| Memory Profiler         | C++ / Linux  |
+| Mini Database           | Rust         |
+| Compiler / VM           | C++          |
+| Rust/C FFI              | C / Rust     |
+| Kernel Module           | C / Rust     |
+| Reformulation           | Free-form    |
+
+Each project should prioritize:
+
+**README → design → implementation → tests → benchmarks → results → conclusions**
+
+---
+
+## Tools
+
+Throughout the journey, the goal is to progressively master:
 
 ```text
 gcc
@@ -226,37 +226,36 @@ rustfmt
 clippy
 ```
 
-La herramienta no es el objetivo. Es el medio para observar aquello que normalmente permanece oculto detrás de las abstracciones.
+The tool is not the goal. It is the means to observe what normally stays hidden behind abstractions.
 
 ---
 
 ## Checkpoints
 
-### 3 meses
+### 3 months
 
-C y C++ sólidos, comprensión profunda de memoria y del proceso de compilación.
+Solid C and C++, deep understanding of memory and the compilation process.
 
-### 6 meses
+### 6 months
 
-Estructuras de datos, ownership, concurrencia y programación de sistemas básica.
+Data structures, ownership, concurrency, and basic systems programming.
 
-### 9 meses
+### 9 months
 
-Procesos, syscalls, memoria virtual y software que interactúa directamente con Linux.
+Processes, syscalls, virtual memory, and software that interacts directly with Linux.
 
-### 12 meses
+### 12 months
 
-Networking de bajo nivel y comprensión del funcionamiento de un async runtime.
+Low-level networking and understanding of how an async runtime works.
 
-### 18 meses
+### 18 months
 
-Sistemas completos pequeños: profiler, storage engine, VM y FFI.
+Complete small systems: profiler, storage engine, VM, and FFI.
 
+### 24 months
 
-### 24 meses
-
-Capacidad para leer software de sistemas real, modificarlo, medirlo, explicar sus decisiones y contribuir a proyectos existentes.
+Ability to read real systems software, modify it, measure it, explain its decisions, and contribute to existing projects.
 
 ---
 
-> Vivo por tu memoria, viejo amigo.
+> I live for your memory, old friend.
